@@ -21,10 +21,50 @@ The program can hide all of the data if there is enough space in the image. The 
 Installation
 ------------
 
-This tool only require OpenCV and its dependencies.
+This tool requires Python 3 and the packages listed in `requirements.txt`
+(OpenCV, NumPy, and docopt).
+
+1. Clone the repository and enter the project directory:
 
 ```bash
+git clone https://github.com/AryanAngiras31/Steganography.git
+cd Steganography
+```
+
+2. Create and activate a virtual environment (recommended):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+On Windows, use the activation command for your shell instead:
+
+```powershell
+# PowerShell
+.venv\Scripts\Activate.ps1
+
+# Command Prompt
+.venv\Scripts\activate.bat
+```
+
+3. Upgrade pip and install the dependencies:
+
+```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+4. Verify the installation:
+
+```bash
+python -c "import cv2, numpy, docopt; print('OpenCV', cv2.__version__)"
+```
+
+When you are finished, you can leave the virtual environment with:
+
+```bash
+deactivate
 ```
 
 Usage
